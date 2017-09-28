@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.4.1'
+
+ruby File.read(".ruby-version").strip
 
 gem 'devise'
 gem 'figaro'
