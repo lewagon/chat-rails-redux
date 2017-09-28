@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+names = %w(general paris react)
+
+names.each do |name|
+  c = Channel.find_or_create_by(name: name)
+end
+
+puts "This db has #{Channel.count} channels: #{Channel.pluck(:name).join(", ")}."
