@@ -1,23 +1,5 @@
-// Graphical variables
-@import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
-
-// External libraries
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
-
-// Your CSS partials
-@import "layouts/index";
-@import "components/index";
-@import "pages/index";
-
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: white;
-  font-size: 14px;
 }
 
 .messaging-wrapper {
@@ -155,15 +137,3 @@ button {
   font-size: 14px;
   font-weight: 600;
 }
-.center-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-#new_user {
-  width: 100%;
-}
-

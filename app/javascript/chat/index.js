@@ -7,6 +7,7 @@ import logger from 'redux-logger'
 import ReduxPromise from 'redux-promise';
 
 // internal modules
+import './assets/stylesheets/application.scss';
 import App from './components/app';
 
 // State and reducers
@@ -38,7 +39,7 @@ const chatContainer = document.getElementById('chat_app');
 // render an instance of the component in the DOM
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <App logoPath={chatContainer.dataset.logoPath} />
   </Provider>,
   chatContainer
 );

@@ -10,14 +10,8 @@
   </head>
   <body>
     <%= render 'shared/flashes' %>
-    <div id="app">
-      <div class="messaging-wrapper">
-        <div class="logo-container">
-          <%= image_tag "logo.svg", class: "messaging-logo" %>
-        </div>
-        <%= yield %>
-      </div>
-    </div>
+    <%= yield %>
     <%= javascript_include_tag 'application' %>
+    <%= yield :after_js %>
   </body>
 </html>
