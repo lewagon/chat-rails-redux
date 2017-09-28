@@ -9,9 +9,15 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div id="app">
+      <div class="messaging-wrapper">
+        <div class="logo-container">
+          <%= image_tag "logo.svg", class: "messaging-logo" %>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
