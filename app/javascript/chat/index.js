@@ -8,7 +8,6 @@ import ReduxPromise from 'redux-promise';
 
 // internal modules
 import App from './components/app';
-import '../assets/stylesheets/application.scss';
 
 // State and reducers
 import messagesReducer from './reducers/messages_reducer';
@@ -33,10 +32,13 @@ const reducers = combineReducers({
 const middlewares = applyMiddleware(logger, ReduxPromise);
 const store = createStore(reducers, initialState, middlewares);
 
+// DOM anchor
+const chatContainer = document.getElementById('chat_app');
+
 // render an instance of the component in the DOM
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('app')
+  chatContainer
 );
