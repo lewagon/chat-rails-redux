@@ -9,7 +9,15 @@
 names = %w(general paris react)
 
 names.each do |name|
-  c = Channel.find_or_create_by(name: name)
+  Channel.find_or_create_by(name: name)
 end
 
 puts "This db has #{Channel.count} channels: #{Channel.pluck(:name).join(", ")}."
+
+nicknames = %w(Papillard ssaunier monsieurpaillard krokrob Eschults)
+
+nicknames.each do |nickname|
+  User.create(nickname: nickname, email: "#{nickname.downcase}@lewagon.com", password: "azertyuiop")
+end
+
+puts "This db has #{User.count} users: #{User.pluck(:nickname).join(", ")}."
