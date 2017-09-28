@@ -1,0 +1,9 @@
+<div id="chat_app"
+  data-channel-id="<%= @channel.id %>"
+  data-current-user-id="<%= current_user.id %>"
+  data-initial-state="<%= @initial_state_json %>"
+></div>
+
+<% content_for :after_js do %>
+  <%= javascript_pack_tag "chat" %>
+<% edn %>
