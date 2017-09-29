@@ -1,7 +1,5 @@
 <div id="chat_app"
-  data-channel="<%= @channel.to_json %>"
-  data-current-user-id="<%= current_user.id %>"
-  data-logo-path="<%= asset_path "logo.svg" %>"
+  data-channels=<%= @channels.to_json %>
 ></div>
 
 <% content_for :after_js do %>

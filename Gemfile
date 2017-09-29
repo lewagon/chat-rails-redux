@@ -10,6 +10,7 @@ gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
 gem 'webpacker', '~> 3.0'
+gem 'rack-cors'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
@@ -18,6 +19,7 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem 'faker'
 
 group :development, :test do
   gem 'pry-byebug'
